@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Upload</title>
+</head>
+<body>
+
+<div style="color: red" th:text="${error}" th:if="${error}">
+    Error during upload
+</div>
+
+<form th:action="@{/}" method="post" enctype="multipart/form-data">
+
+    <input type="file" id="file" name="file"/>
+    <button type="submit" name="save">Submit</button>
+</form>
+</body>
+</html>
